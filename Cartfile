@@ -1,0 +1,19 @@
+## UI
+github "AliSoftware/Reusable"
+
+## Rx
+github "ReactiveX/RxSwift"
+# masterでないと、carthage build 失敗する
+# cf: https://github.com/RxSwiftCommunity/Action/pull/222
+github "RxSwiftCommunity/Action" "master"
+github "RxSwiftCommunity/RxSwiftExt"
+
+## network
+github "ishkawa/APIKit"
+
+## image
+github "kean/Nuke"
+
+## others
+github "cats-oss/Unio"
+github "sunshinejr/SwiftyUserDefaults"
