@@ -1,0 +1,31 @@
+name: Action, nameSpecified: , owner: RxSwiftCommunity, version: 77a1aba
+
+name: APIKit, nameSpecified: , owner: ishkawa, version: 5.1.0
+
+name: Carthage, nameSpecified: , owner: Carthage, version: 0.36.0
+
+name: LicensePlist, nameSpecified: , owner: mono0926, version: 3.0.5
+
+name: Nuke, nameSpecified: , owner: kean, version: 9.1.2
+
+name: R.swift, nameSpecified: , owner: mac-cain13, version: v5.3.0
+
+name: R.swift.Library, nameSpecified: , owner: mac-cain13, version: v5.3.0
+
+name: Reusable, nameSpecified: , owner: AliSoftware, version: 4.1.1
+
+name: RxSwift, nameSpecified: , owner: ReactiveX, version: 5.1.1
+
+name: RxSwiftExt, nameSpecified: , owner: RxSwiftCommunity, version: 5.2.0
+
+name: SwiftLint, nameSpecified: , owner: realm, version: 0.41.0
+
+name: SwiftyUserDefaults, nameSpecified: , owner: sunshinejr, version: 5.0.0
+
+name: Unio, nameSpecified: , owner: cats-oss, version: 0.10.0
+
+name: XcodeGen, nameSpecified: , owner: yonaskolb, version: 2.18.0
+
+add-version-numbers: false
+
+LicensePlist Version: 3.0.5
