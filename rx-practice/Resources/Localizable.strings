@@ -5,3 +5,5 @@
 "os_dialog.retry" = "リトライ";
 "os_dialog.unimplemented_title" = "未実装";
 "os_dialog.unimplemented_message" = "未実装箇所のため、動作しません";
+"main.title" = "Lessonリスト";
+"main.first_lesson" = "Lesson1 インクリメントするラベルとボタン";
