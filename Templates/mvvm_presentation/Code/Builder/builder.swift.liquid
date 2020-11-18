@@ -1,0 +1,32 @@
+//
+//  {{ module_info.file_name }}
+//  {{ module_info.project_name }}
+//
+//  Created by {{ developer.name }} on {{ date }}.
+//  Copyright © {{ year }} {{ developer.company }}. All rights reserved.
+//
+
+import UIKit
+
+final class {{ module_info.name }}Builder {
+
+    private init() {}
+
+    static func build() -> UIViewController {
+        let viewController = {{ module_info.name }}ViewController.instantiate()
+        let wireframe = {{ module_info.name }}WireframeImpl()
+
+        wireframe.viewController = viewController
+
+        let viewModel = {{ module_info.name }}ViewModel(
+            extra: .init(
+                wireframe: wireframe,
+                useCase: {{ module_info.name }}UseCaseProvider.provide()
+            )
+        )
+    
+        viewController.viewModel = viewModel
+
+        return viewController
+    }
+}

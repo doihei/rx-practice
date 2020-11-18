@@ -1,0 +1,82 @@
+//
+//  {{ module_info.file_name }}
+//  {{ module_info.project_name }}
+//
+//  Created by {{ developer.name }} on {{ date }}.
+//  Copyright © {{ year }} {{ developer.company }}. All rights reserved.
+//
+
+import RxCocoa
+import RxSwift
+import Unio
+
+protocol {{ module_info.name }}ViewModelType: AnyObject {
+    var input: InputWrapper<{{ module_info.name }}ViewModel.Input> { get }
+    var output: OutputWrapper<{{ module_info.name }}ViewModel.Output> { get }
+}
+
+final class {{ module_info.name }}ViewModel: UnioStream<{{ module_info.name }}ViewModel>, {{ module_info.name }}ViewModelType {
+
+    convenience init(extra: Extra) {
+        self.init(input: Input(),
+                  state: State(),
+                  extra: extra)
+    }
+}
+
+extension {{ module_info.name }}ViewModel {
+
+    struct Input: InputType {
+
+        /*
+         *  EXAMPLE:
+         *
+         *  let buttonTap = PublishRelay<Void>()
+         */
+    }
+
+    struct Output: OutputType {
+        let networkState: BehaviorRelay<NetworkState>
+        /*
+         *  EXAMPLE:
+         *
+         *  let isEnabled: Observable<Bool>
+         */
+    }
+
+    struct State: StateType {
+        let networkState = BehaviorRelay<NetworkState>(value: .normal)
+    }
+
+    struct Extra: ExtraType {
+        let wireframe: {{ module_info.name }}Wireframe
+        let useCase: {{ module_info.name }}UseCase
+    }
+}
+
+extension {{ module_info.name }}ViewModel {
+
+    static func bind(from dependency: Dependency<Input, State, Extra>, disposeBag: DisposeBag) -> Output {
+
+        let state = dependency.state
+        let extra = dependency.extra
+
+        /*
+         *  EXAMPLE:
+         *
+         *  dependency.inputObservable(for: \.buttonTap)
+         *      .map { _ in false }
+         *      .bind(to: state.isEnabled)
+         *      .disposed(by: disposeBag)
+         */
+
+        return Output(
+            networkState: state.networkState
+            /*
+             * EXAMPLE:
+             *
+             * isEnabled: state.isEnabled.asObservable()
+             */
+        )
+    }
+}

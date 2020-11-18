@@ -1,2 +1,7 @@
-
-"test" = "test";
+"os_dialog.ok" = "OK";
+"os_dialog.retry" = "再試行";
+"os_dialog.confirm_title" = "確認";
+"os_dialog.cancel" = "キャンセル";
+"os_dialog.retry" = "リトライ";
+"os_dialog.unimplemented_title" = "未実装";
+"os_dialog.unimplemented_message" = "未実装箇所のため、動作しません";

@@ -1,0 +1,25 @@
+### Headers settings
+company: and factory inc.
+
+### Xcode project settings
+project_name: rx-practice
+xcodeproj_path: rx-practice.xcodeproj
+
+### Code generation settings section
+# The main project target name
+project_target: rx-practice
+
+# The file path for new modules
+project_file_path: rx-practice/Presenters
+
+# The Xcode group path to new modules
+project_group_path: rx-practice/Presenters
+
+### Dependencies settings section
+cartfile_pasth: Cartfile
+
+### Templates
+catalogs:
+- 'https://github.com/doihei/GenerambaTemplate'
+templates:
+- {name: mvvm_presentation}

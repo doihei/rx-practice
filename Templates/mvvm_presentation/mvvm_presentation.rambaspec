@@ -1,0 +1,24 @@
+# Template information section
+name: "mvvm_presentation"
+summary: "for MVVM presentation layer"
+author: "Daihei Doi"
+version: "0.1.0"
+license: "MIT"
+
+# The declarations for code files
+
+code_files:
+
+# ViewController
+- {name: ViewController/ViewController.swift, path: Code/ViewController/viewcontroller.swift.liquid}
+- {name: ViewController/ViewController.storyboard, path: Code/ViewController/viewcontroller.storyboard.liquid}
+
+# ViewModel
+- {name: ViewModel/ViewModel.swift, path: Code/ViewModel/viewmodel.swift.liquid}
+
+# Wireframe
+- {name: Wireframe/Wireframe.swift, path: Code/Wireframe/wireframe.swift.liquid}
+- {name: Wireframe/TransitToWireframe.swift, path: Code/Wireframe/transittowireframe.swift.liquid, custom_name: "TransitTo{{ module_info.name }}Wireframe.swift"}
+
+# Builder
+- {name: Builder/Builder.swift, path: Code/Builder/builder.swift.liquid}

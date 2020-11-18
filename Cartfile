@@ -1,5 +1,6 @@
 ## UI
 github "AliSoftware/Reusable"
+github "SVProgressHUD/SVProgressHUD"
 
 ## Rx
 github "ReactiveX/RxSwift"

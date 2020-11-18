@@ -5,6 +5,7 @@
 //  Created by doi on 2020/11/17.
 //
 
+import SVProgressHUD
 import UIKit
 
 @main
@@ -12,6 +13,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
+        
+        setupAppearance()
+        
         return true
     }
 
@@ -33,3 +37,13 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     }
 }
 
+// MARK: - private
+extension AppDelegate {
+    
+    private func setupAppearance() {
+        SVProgressHUD.setDefaultMaskType(.clear)
+        SVProgressHUD.setDefaultAnimationType(.native)
+        SVProgressHUD.setDefaultStyle(.custom)
+        SVProgressHUD.setBackgroundColor(.clear)
+    }
+}
