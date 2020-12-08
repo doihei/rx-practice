@@ -6,9 +6,9 @@
 //
 
 import Action
+import PKHUD
 import RxCocoa
 import RxSwift
-import SVProgressHUD
 import UIKit
 
 protocol ShowLoadingView: ShowAlertView {
@@ -47,7 +47,6 @@ extension ShowLoadingView where Self: UIViewController {
         case .error(let error):
             let title: String
             let message: String
-            let buttonType: AlertButtonType = .ok(nil)
             if let error = error as? ErrorProtocol {
                 title = error.title
                 message = error.message
@@ -56,16 +55,11 @@ extension ShowLoadingView where Self: UIViewController {
                 title = R.string.localizable.os_dialogConfirm_title()
                 message = error.localizedDescription
             }
-            SVProgressHUD.dismiss()
-            showAlert(alertable: Alerts.General(
-                title: title,
-                message: message,
-                buttonType: buttonType
-            ))
+            HUD.flash(.labeledError(title: title, subtitle: message))
         case .loading:
-            SVProgressHUD.show()
+            HUD.show(.progress)
         case .normal:
-            SVProgressHUD.dismiss()
+            HUD.flash(.success)
         }
     }
 }

@@ -5,7 +5,6 @@
 //  Created by doi on 2020/11/17.
 //
 
-import SVProgressHUD
 import UIKit
 
 class SceneDelegate: UIResponder, UIWindowSceneDelegate {
@@ -20,7 +19,6 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
             return
         }
         setupRootViewController(windowScene)
-        setupAppearance()
     }
 
     func sceneDidDisconnect(_ scene: UIScene) {
@@ -63,12 +61,5 @@ extension SceneDelegate {
         window.makeKeyAndVisible()
         let appDelegate = UIApplication.shared.delegate as! AppDelegate
         appDelegate.window = self.window
-    }
-    
-    private func setupAppearance() {
-        SVProgressHUD.setDefaultMaskType(.clear)
-        SVProgressHUD.setDefaultAnimationType(.native)
-        SVProgressHUD.setDefaultStyle(.custom)
-        SVProgressHUD.setBackgroundColor(.clear)
     }
 }

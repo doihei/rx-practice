@@ -46,7 +46,7 @@ targets:
       - carthage: RxSwift
       - carthage: RxSwiftExt
       - carthage: SwiftyUserDefaults
-      - carthage: SVProgressHUD
+      - carthage: PKHUD
       - carthage: Unio
     preBuildScripts:
       - script: |
