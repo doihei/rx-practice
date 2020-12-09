@@ -58,7 +58,7 @@ targets:
     type: application
     platform: iOS
     scheme: {}
-    deploymentTarget: "11.0"
+    deploymentTarget: "13.0"
     sources:
       - rx-practice
       - path: "rx-practice/Resources/R.generated.swift"
