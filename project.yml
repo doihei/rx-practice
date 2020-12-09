@@ -1,4 +1,35 @@
 name: rx-practice
+packages:
+  Reusable:
+    url: https://github.com/AliSoftware/Reusable
+    from: 4.1.1
+  RxSwift:
+    url: https://github.com/ReactiveX/RxSwift
+    from: 5.1.1
+  Action:
+    url: https://github.com/RxSwiftCommunity/Action
+    branch: master
+  RxSwiftExt:
+    url: https://github.com/RxSwiftCommunity/RxSwiftExt
+    from: 5.2.0
+  Unio:
+    url: https://github.com/cats-oss/Unio
+    from: 0.10.0
+  APIKit:
+    url: https://github.com/ishkawa/APIKit
+    from: 5.1.0
+  Nuke:
+    url: https://github.com/kean/Nuke
+    from: 9.2.0
+  Rswift:
+    url: https://github.com/mac-cain13/R.swift.Library
+    from: 5.3.0
+  PKHUD:
+    url: https://github.com/pkluz/PKHUD
+    from: 5.4.0
+  SwiftyUserDefaults:
+    url: https://github.com/sunshinejr/SwiftyUserDefaults
+    from: 5.0.0
 configs:
   Debug: debug
   Release: release
@@ -27,7 +58,7 @@ targets:
     type: application
     platform: iOS
     scheme: {}
-    deploymentTarget: "13.0"
+    deploymentTarget: "11.0"
     sources:
       - rx-practice
       - path: "rx-practice/Resources/R.generated.swift"
@@ -37,17 +68,18 @@ targets:
       groups: [rxPracticeSettings]
     dependencies:
       - target: Datasource
-      - carthage: Action
-      - carthage: Nuke
-      - carthage: Reusable
-      - carthage: Rswift
-      - carthage: RxCocoa
-      - carthage: RxRelay
-      - carthage: RxSwift
-      - carthage: RxSwiftExt
-      - carthage: SwiftyUserDefaults
-      - carthage: PKHUD
-      - carthage: Unio
+      - package: Action
+      - package: Nuke
+      - package: Reusable
+      - package: Rswift
+      - package: RxSwift
+        product: RxCocoa
+      - package: RxSwift
+        product: RxRelay
+      - package: RxSwift
+      - package: RxSwiftExt
+      - package: PKHUD
+      - package: Unio
     preBuildScripts:
       - script: |
                 if mint list | grep -q 'R.swift'; then
@@ -82,4 +114,5 @@ targets:
     settings:
       groups: [rxPracticeSettings]
     dependencies:
-      - carthage: APIKit
+      - package: APIKit
+      - package: SwiftyUserDefaults
