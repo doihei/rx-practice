@@ -94,4 +94,7 @@ vendor/bundle
 # xcode12 carthage work dir
 scripts/configs
 
+# SwiftPM Version
+!Package.resolved
+
 !.gitkeep
