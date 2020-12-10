@@ -8,19 +8,19 @@ name: XcodeGen, nameSpecified: , owner: yonaskolb, version: 2.18.0
 
 name: Action, nameSpecified: Action, owner: RxSwiftCommunity, version: 
 
-name: APIKit, nameSpecified: APIKit, owner: ishkawa, version: 5.1.0
+name: APIKit, nameSpecified: APIKit, owner: ishkawa, version: 
 
 name: Nuke, nameSpecified: Nuke, owner: kean, version: 9.2.0
 
 name: PKHUD, nameSpecified: PKHUD, owner: pkluz, version: 5.4.0
 
-name: R.swift.Library, nameSpecified: R.swift.Library, owner: mac-cain13, version: 5.3.0
+name: R.swift.Library, nameSpecified: R.swift.Library, owner: mac-cain13, version: 5.2.0
 
 name: Reusable, nameSpecified: Reusable, owner: AliSoftware, version: 4.1.1
 
 name: RxSwift, nameSpecified: RxSwift, owner: ReactiveX, version: 5.1.1
 
-name: RxSwiftExt, nameSpecified: RxSwiftExt, owner: RxSwiftCommunity, version: 5.2.0
+name: RxSwiftExt, nameSpecified: RxSwiftExt, owner: RxSwiftCommunity, version: 5.1.1
 
 name: SwiftyUserDefaults, nameSpecified: SwiftyUserDefaults, owner: sunshinejr, version: 5.0.0
 

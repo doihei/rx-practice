@@ -1,35 +1,36 @@
 name: rx-practice
-packages:
+packages: # SwiftPMで扱うPackageを最初に定義
   Reusable:
     url: https://github.com/AliSoftware/Reusable
-    from: 4.1.1
+    exactVersion: 4.1.1 # バージョン指定 versionでもOK
   RxSwift:
     url: https://github.com/ReactiveX/RxSwift
-    from: 5.1.1
+    minorVersion: 5.1.1 #指定マイナーバージョン ex: 5.1系ならどれでもOK
   Action:
     url: https://github.com/RxSwiftCommunity/Action
-    branch: master
+    branch: master # ブランチ指定
   RxSwiftExt:
     url: https://github.com/RxSwiftCommunity/RxSwiftExt
-    from: 5.2.0
+    minVersion: 5.1.0 # 指定バージョン以上かつ
+    maxVersion: 5.2.0 # 指定バージョンより小さい
+  APIKit:
+    url: https://github.com/ishkawa/APIKit
+    revision: b95a941 # コミット指定
+  Rswift:
+    url: https://github.com/mac-cain13/R.swift.Library
+    majorVersion: 5.2.0 #指定メジャーバージョン fromでもOK ex: 5系ならどれでもOK
+  SwiftyUserDefaults:
+    url: https://github.com/sunshinejr/SwiftyUserDefaults
+    from: 5.0.0 # majorVersionと同義
   Unio:
     url: https://github.com/cats-oss/Unio
     from: 0.10.0
-  APIKit:
-    url: https://github.com/ishkawa/APIKit
-    from: 5.1.0
   Nuke:
     url: https://github.com/kean/Nuke
     from: 9.2.0
-  Rswift:
-    url: https://github.com/mac-cain13/R.swift.Library
-    from: 5.3.0
   PKHUD:
     url: https://github.com/pkluz/PKHUD
     from: 5.4.0
-  SwiftyUserDefaults:
-    url: https://github.com/sunshinejr/SwiftyUserDefaults
-    from: 5.0.0
 configs:
   Debug: debug
   Release: release
@@ -67,16 +68,16 @@ targets:
     settings:
       groups: [rxPracticeSettings]
     dependencies:
-      - target: Datasource
+      - target: Datasource # Embedded Framework
       - package: Action
       - package: Nuke
       - package: Reusable
       - package: Rswift
       - package: RxSwift
-        product: RxCocoa
+        product: RxCocoa # RxSwift内部のRxCocoaを指定する
       - package: RxSwift
         product: RxRelay
-      - package: RxSwift
+      - package: RxSwift # RxSwift内部のRxRelayを指定する
       - package: RxSwiftExt
       - package: PKHUD
       - package: Unio
