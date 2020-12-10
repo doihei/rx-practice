@@ -83,9 +83,9 @@ fastlane/README.md
 iOSInjectionProject/
 
 # xcodegen
-*.xcodeproj/**
+*.xcodeproj/*
 # SwiftPM Version
-!*.xcodeproj/project.xcworkspace/xcshareddata/swiftpm/Package.resolved
+!Package.resolved
 
 # swiftgen
 */Resources/*.generated.swift
