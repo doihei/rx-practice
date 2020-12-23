@@ -84,8 +84,6 @@ iOSInjectionProject/
 
 # xcodegen
 *.xcodeproj/*
-# SwiftPM Version
-!Package.resolved
 
 # swiftgen
 */Resources/*.generated.swift

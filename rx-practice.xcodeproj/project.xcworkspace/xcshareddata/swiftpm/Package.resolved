@@ -14,9 +14,9 @@
         "package": "APIKit",
         "repositoryURL": "https://github.com/ishkawa/APIKit",
         "state": {
-          "branch": null,
-          "revision": "f24f05616f8972fec937c2f069491468a8fabf85",
-          "version": "5.1.0"
+          "branch": "b95a941",
+          "revision": "b95a941c263819ff8f0c327cb1296c4b89cf1f9b",
+          "version": null
         }
       },
       {
@@ -56,21 +56,12 @@
         }
       },
       {
-        "package": "RxSwift",
-        "repositoryURL": "https://github.com/ReactiveX/RxSwift",
-        "state": {
-          "branch": null,
-          "revision": "002d325b0bdee94e7882e1114af5ff4fe1e96afa",
-          "version": "5.1.1"
-        }
-      },
-      {
         "package": "RxSwiftExt",
         "repositoryURL": "https://github.com/RxSwiftCommunity/RxSwiftExt",
         "state": {
           "branch": null,
-          "revision": "9620cd55a58c1cf3370375140c45379c40049f55",
-          "version": "5.2.0"
+          "revision": "608136ecaf29b2c43345dab95518464e57567449",
+          "version": "5.1.1"
         }
       },
       {
